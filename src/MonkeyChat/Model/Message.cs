@@ -35,7 +35,6 @@ namespace MonkeyChat
         public bool HasAttachement => !string.IsNullOrEmpty(attachementUrl);
 
         string attachementUrl;
-
         public string AttachementUrl
         {
             get { return attachementUrl; }

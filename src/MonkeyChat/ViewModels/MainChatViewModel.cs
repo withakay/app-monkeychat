@@ -18,7 +18,8 @@ namespace MonkeyChat
     {
 
         public ObservableRangeCollection<Message> Messages { get; }
-        ITwilioMessenger twilioMessenger;
+
+        IAblyMessenger ablyMessenger;
 
         string outgoingText = string.Empty;
 
@@ -36,9 +37,7 @@ namespace MonkeyChat
         public MainChatViewModel()
         {
             // Initialize with default values
-            twilioMessenger = DependencyService.Get<ITwilioMessenger>();
-
-
+            ablyMessenger = DependencyService.Get<IAblyMessenger>();
 
             Messages = new ObservableRangeCollection<Message>();
 
@@ -54,7 +53,7 @@ namespace MonkeyChat
 
                 Messages.Add(message);
 
-                twilioMessenger?.SendMessage(message.Text);
+                ablyMessenger?.SendMessage(message.Text);
 
                 OutGoingText = string.Empty;
             });
@@ -64,7 +63,7 @@ namespace MonkeyChat
             {
                 try
                 {
-                    var local = await CrossGeolocator.Current.GetPositionAsync(10000);
+                    var local = await CrossGeolocator.Current.GetPositionAsync(new TimeSpan(0,0,10));
                     var map = $"https://maps.googleapis.com/maps/api/staticmap?center={local.Latitude.ToString(CultureInfo.InvariantCulture)},{local.Longitude.ToString(CultureInfo.InvariantCulture)}&zoom=17&size=400x400&maptype=street&markers=color:red%7Clabel:%7C{local.Latitude.ToString(CultureInfo.InvariantCulture)},{local.Longitude.ToString(CultureInfo.InvariantCulture)}&key=";
 
                     var message = new Message
@@ -76,7 +75,7 @@ namespace MonkeyChat
                     };
 
                     Messages.Add(message);
-                    twilioMessenger?.SendMessage("attach:" + message.AttachementUrl);
+                    ablyMessenger?.SendMessage("attach:" + message.AttachementUrl);
 
                 }
                 catch (Exception ex)
@@ -86,10 +85,10 @@ namespace MonkeyChat
             });
 
 
-            if (twilioMessenger == null)
+            if (ablyMessenger == null)
                 return;
             
-            twilioMessenger.MessageAdded = (message) =>
+            ablyMessenger.MessageAdded = (message) =>
             {
                 Messages.Add(message);
             };                      

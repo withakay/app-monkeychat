@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace MonkeyChat
 {
-    public interface ITwilioMessenger
+    public interface IAblyMessenger
     {
         Task<bool> InitializeAsync();
 
@@ -12,4 +12,3 @@ namespace MonkeyChat
         Action<Message> MessageAdded { get; set; }
     }
 }
-

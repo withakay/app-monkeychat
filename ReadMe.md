@@ -1,21 +1,42 @@
 ## MonkeyChat
 
-Xamarin.Forms and Twilio powered chat application.
+A Xamarin.Forms and Ably.io powered chat application.
+This project shamelessly adapts the sample app created by Xamarin’s [Nish Anil](https://github.com/nishanil/Xamarin.Forms-Samples)
 
 ## Setup
 
-Please setup and run your own .NET server (or other server) on azure or locally: https://github.com/TwilioDevEd/ipm-quickstart-csharp is the quick start guide.
+Get your free API Key from [ably.io](https://www.ably.io).
 
-Then simply insert your server url here: https://github.com/jamesmontemagno/app-monkeychat/blob/master/src/MonkeyChat/Helpers/TwilioHelper.cs#L18
+* Log into your app dashboard
+* Under “Your apps”, click on “Manage app” for any app you wish to use for this tutorial, or create a new one with the “Create New App” button
+* Click on the “API Keys” tab
+* Copy the secret “API Key” value from your Root key and store it so that you can use it later in this demo
+
+
+Now you have your api key you need to put it in a couple of places in the code.
+
+To do this, replace the api key place holder
+
+  const string AblyApiKey = "YOUR_API_KEY_HERE";
+
+ this needs to be done twice, once in
+
+  MonkeyChat.Droid/Helpers/AblyMessenger.cs
+
+and once in
+
+  MonkeyChat.IOS/Helpers/AblyMessenger.cs
+
+
+That is it!
+
 
 ## Learn More
+
 * Get Started with Xamarin: http://xamarin.com
-* [Twilio IP Messaging component](https://components.xamarin.com/view/twilio-ipm)
-* Blog: [Build iOS chat apps with Xamarin and Twilio](https://www.twilio.com/blog/2016/05/how-to-build-ios-chat-apps-using-xamarin-and-twilio.html)
-* Blog: [Build Android chat apps with Xamarin and Twilio](https://www.twilio.com/blog/2016/05/how-to-build-android-chat-apps-using-xamarin-and-twilio.html)
 
 
 ![](https://raw.githubusercontent.com/nishanil/Xamarin.Forms-Samples/master/Screenshots/Hero-DataTemplateSelector.png)
 
 
-This project is a re-implementation of a sample by Xamarin’s [Nish Anil](https://github.com/nishanil/Xamarin.Forms-Samples)
+

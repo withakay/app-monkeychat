@@ -7,7 +7,7 @@ namespace MonkeyChat
 {
     public class RoomsViewModel : BaseViewModel
     {
-        ITwilioMessenger twilioMessenger;
+        IAblyMessenger ablyMessenger;
 
         public Command ConnectCommand { get; }
 
@@ -16,7 +16,7 @@ namespace MonkeyChat
         public RoomsViewModel(Page page)
         {
             this.page = page;
-            twilioMessenger = DependencyService.Get<ITwilioMessenger>();
+            ablyMessenger = DependencyService.Get<IAblyMessenger>();
 
             ConnectCommand = new Command(async () =>
             {
@@ -25,7 +25,7 @@ namespace MonkeyChat
                 try
                 {
                     IsBusy = true;
-                    success = await twilioMessenger.InitializeAsync();
+                    success = await ablyMessenger.InitializeAsync();
                 }
                 catch (Exception ex)
                 {

@@ -23,7 +23,7 @@ namespace MonkeyChat.Droid
             Xamarin.FormsMaps.Init(this, bundle);
             ImageCircleRenderer.Init();
 
-            DependencyService.Register<ITwilioMessenger, TwilioMessenger>();
+            DependencyService.Register<IAblyMessenger, AblyMessenger>();
 
             LoadApplication(new App());
         }

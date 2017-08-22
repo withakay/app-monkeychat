@@ -8,7 +8,11 @@ namespace MonkeyChat.iOS
 {
     public class AblyMessenger : IAblyMessenger
     {
+
+
         string AblyApiKey = "Bss0RA.2NPWDA:nKjEFbpTlwCR1zMg";
+
+
         const string MessageEvent = "message";
         AblyRealtime _realtime;
         IO.Ably.Realtime.IRealtimeChannel _channel;
@@ -27,7 +31,7 @@ namespace MonkeyChat.iOS
                     _channel.Subscribe(MessageEvent, (IO.Ably.Message msg) => {
 
                         // We don't need to respond to messages from ourselves!
-                        if(_realtime.ClientId == msg.ClientId) 
+                        if(_realtime.Connection.Id == msg.ConnectionId) 
                             return;
                         
                         MessageAdded?.Invoke(new Message

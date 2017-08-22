@@ -7,6 +7,11 @@ namespace MonkeyChat.Droid
 {
     public class AblyMessenger : IAblyMessenger
     {
+
+
+        const string AblyApiKey = "YOUR_API_KEY_HERE";
+
+
         const string MessageEvent = "message";
         AblyRealtime _realtime;
         IO.Ably.Realtime.IRealtimeChannel _channel;
@@ -17,7 +22,7 @@ namespace MonkeyChat.Droid
         {
             var task = new TaskCompletionSource<bool>();
 
-            _realtime = new AblyRealtime("Bss0RA.2NPWDA:nKjEFbpTlwCR1zMg");
+            _realtime = new AblyRealtime(AblyApiKey);
             _realtime.Connection.On(args =>
             {
                 if (args.Current == IO.Ably.Realtime.ConnectionState.Connected)
@@ -26,7 +31,7 @@ namespace MonkeyChat.Droid
                     _channel.Subscribe(MessageEvent, (IO.Ably.Message msg) => {
 
                         // We don't need to respond to messages from ourselves!
-                        if (_realtime.ClientId == msg.ClientId)
+                        if (_realtime.Connection.Id == msg.ConnectionId)
                             return;
 
                         MessageAdded?.Invoke(new Message
@@ -38,6 +43,10 @@ namespace MonkeyChat.Droid
                     });
 
                     task.SetResult(true);
+                }
+                if (args.Current == IO.Ably.Realtime.ConnectionState.Disconnected)
+                {
+                    _realtime.Connect();
                 }
             });
 

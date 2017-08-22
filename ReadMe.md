@@ -1,7 +1,7 @@
 ## MonkeyChat
 
 A Xamarin.Forms and Ably.io powered chat application.
-This project shamelessly adapts the sample app created by Xamarin’s [Nish Anil](https://github.com/nishanil/Xamarin.Forms-Samples)
+This project shamelessly adapts the work of Microsoft's [James Montemagno](https://github.com/jamesmontemagno) & [Nish Anil](https://github.com/nishanil/Xamarin.Forms-Samples)
 
 ## Setup
 

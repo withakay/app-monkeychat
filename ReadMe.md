@@ -13,7 +13,7 @@ Get your free API Key from [ably.io](https://www.ably.io).
 * Copy the secret “API Key” value from your Root key and store it so that you can use it later in this demo
 
 
-Now you have your api key you need to put it in a couple of places in the code.
+Now you have your api key you need to put it in in the code.
 
 To do this, replace the api key place holder
 
@@ -21,11 +21,7 @@ To do this, replace the api key place holder
 
  this needs to be done twice, once in
 
-  MonkeyChat.Droid/Helpers/AblyMessenger.cs
-
-and once in
-
-  MonkeyChat.IOS/Helpers/AblyMessenger.cs
+  MonkeyChat.Shared/AblyMessenger.cs
 
 
 That is it!

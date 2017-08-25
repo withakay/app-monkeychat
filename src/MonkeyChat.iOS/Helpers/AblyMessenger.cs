@@ -10,7 +10,7 @@ namespace MonkeyChat.iOS
     {
 
 
-        string AblyApiKey = "Bss0RA.2NPWDA:nKjEFbpTlwCR1zMg";
+        string AblyApiKey = "YOUR_API_KEY_HERE";
 
 
         const string MessageEvent = "message";

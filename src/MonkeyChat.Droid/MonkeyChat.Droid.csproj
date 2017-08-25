@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\MonkeyChat.Shared\MonkeyChat.Shared.projitems" Label="Shared" Condition="Exists('..\MonkeyChat.Shared\MonkeyChat.Shared.projitems')" />
   <Import Project="..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -191,7 +192,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Helpers\ListViewBottomEffect.cs" />
     <Compile Include="MainApplication.cs" />
-    <Compile Include="Helpers\AblyMessenger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -23,7 +23,7 @@ namespace MonkeyChat.Droid
             Xamarin.FormsMaps.Init(this, bundle);
             ImageCircleRenderer.Init();
 
-            DependencyService.Register<IAblyMessenger, AblyMessenger>();
+            DependencyService.Register<IAblyMessenger, MonkeyChat.Shared.AblyMessenger>();
 
             LoadApplication(new App());
         }

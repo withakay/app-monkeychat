@@ -1,10 +1,8 @@
 ﻿using System;
-
 using System.Threading.Tasks;
-using Foundation;
 using IO.Ably;
 
-namespace MonkeyChat.iOS
+namespace MonkeyChat.Shared
 {
     public class AblyMessenger : IAblyMessenger
     {
@@ -26,14 +24,15 @@ namespace MonkeyChat.iOS
             _realtime = new AblyRealtime(AblyApiKey);
             _realtime.Connection.On(args =>
             {
-                if(args.Current == IO.Ably.Realtime.ConnectionState.Connected) {
+                if (args.Current == IO.Ably.Realtime.ConnectionState.Connected)
+                {
                     _channel = _realtime.Channels.Get("general");
                     _channel.Subscribe(MessageEvent, (IO.Ably.Message msg) => {
 
                         // We don't need to respond to messages from ourselves!
-                        if(_realtime.Connection.Id == msg.ConnectionId) 
+                        if (_realtime.Connection.Id == msg.ConnectionId)
                             return;
-                        
+
                         MessageAdded?.Invoke(new Message
                         {
                             IsIncoming = true,
@@ -44,7 +43,8 @@ namespace MonkeyChat.iOS
 
                     task.SetResult(true);
                 }
-                if(args.Current == IO.Ably.Realtime.ConnectionState.Disconnected) {
+                if (args.Current == IO.Ably.Realtime.ConnectionState.Disconnected)
+                {
                     _realtime.Connect();
                 }
             });

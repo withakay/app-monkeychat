@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyChat.iOS", "MonkeyCha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyChat", "MonkeyChat\MonkeyChat.csproj", "{89B93CC3-A680-4567-87D2-946B0112A928}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MonkeyChat.Shared", "MonkeyChat.Shared\MonkeyChat.Shared.shproj", "{75FFDA2F-3508-43E3-AAE8-71EDEC89C271}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -197,32 +199,12 @@ Global
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
-		$1.DirectoryNamespaceAssociation = None
 		$1.ResourceNamePolicy = FileName
 		$0.TextStylePolicy = $2
-		$2.inheritsSet = VisualStudio
-		$2.inheritsScope = text/plain
 		$2.scope = text/x-csharp
+		$2.FileWidth = 80
+		$2.TabsToSpaces = True
 		$0.CSharpFormattingPolicy = $3
-		$3.IndentSwitchSection = True
-		$3.NewLinesForBracesInProperties = True
-		$3.NewLinesForBracesInAccessors = True
-		$3.NewLinesForBracesInAnonymousMethods = True
-		$3.NewLinesForBracesInControlBlocks = True
-		$3.NewLinesForBracesInAnonymousTypes = True
-		$3.NewLinesForBracesInObjectCollectionArrayInitializers = True
-		$3.NewLinesForBracesInLambdaExpressionBody = True
-		$3.NewLineForElse = True
-		$3.NewLineForCatch = True
-		$3.NewLineForFinally = True
-		$3.NewLineForMembersInObjectInit = True
-		$3.NewLineForMembersInAnonymousTypes = True
-		$3.NewLineForClausesInQuery = True
-		$3.SpacingAfterMethodDeclarationName = False
-		$3.SpaceAfterMethodCallName = False
-		$3.SpaceBeforeOpenSquareBracket = False
-		$3.inheritsSet = Mono
-		$3.inheritsScope = text/x-csharp
 		$3.scope = text/x-csharp
 		$0.NameConventionPolicy = $4
 		$4.Rules = $5

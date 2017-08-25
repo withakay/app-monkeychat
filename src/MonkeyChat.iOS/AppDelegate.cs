@@ -28,7 +28,7 @@ namespace MonkeyChat.iOS
             Xamarin.FormsMaps.Init();
             ImageCircleRenderer.Init();
 
-            DependencyService.Register<IAblyMessenger, AblyMessenger>();
+            DependencyService.Register<IAblyMessenger, MonkeyChat.Shared.AblyMessenger>();
 
             LoadApplication(new App());
             return base.FinishedLaunching(app, options);

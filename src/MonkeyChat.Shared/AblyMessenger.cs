@@ -12,7 +12,7 @@ namespace MonkeyChat.Shared
 
 
         const string MessageEvent = "message";
-        AblyRealtime _realtime;
+        AblyRealtime _client;
         IO.Ably.Realtime.IRealtimeChannel _channel;
 
         public Action<Message> MessageAdded { get; set; }
@@ -21,18 +21,23 @@ namespace MonkeyChat.Shared
         {
             var task = new TaskCompletionSource<bool>();
 
-            _realtime = new AblyRealtime(AblyApiKey);
-            _realtime.Connection.On(args =>
+            _client = new AblyRealtime(new ClientOptions()
+            {
+                Key = AblyApiKey,
+                EchoMessages = false // prevent messages the client sends echoing back
+            });
+
+            _client.Connection.On(args =>
             {
                 if (args.Current == IO.Ably.Realtime.ConnectionState.Connected)
                 {
-                    _channel = _realtime.Channels.Get("general");
+                    // channels don't get automatically reattached 
+                    // if the connection drop, so do that manually 
+                    foreach (var channel in _client.Channels)
+                        channel.Attach();
+
+                    _channel = _client.Channels.Get("general");
                     _channel.Subscribe(MessageEvent, (IO.Ably.Message msg) => {
-
-                        // We don't need to respond to messages from ourselves!
-                        if (_realtime.Connection.Id == msg.ConnectionId)
-                            return;
-
                         MessageAdded?.Invoke(new Message
                         {
                             IsIncoming = true,
@@ -40,12 +45,11 @@ namespace MonkeyChat.Shared
                             Text = msg.Data.ToString()
                         });
                     });
-
                     task.SetResult(true);
                 }
                 if (args.Current == IO.Ably.Realtime.ConnectionState.Disconnected)
                 {
-                    _realtime.Connect();
+                    _client.Connect();
                 }
             });
 

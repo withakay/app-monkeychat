@@ -10,5 +10,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)AblyMessenger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MsWebSocketTransport.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)TestAppSetup.json" />
   </ItemGroup>
 </Project>

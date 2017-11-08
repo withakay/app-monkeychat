@@ -1,14 +1,25 @@
 ﻿using System;
 using System.Threading.Tasks;
 using IO.Ably;
+using System.Reflection;
+using System.IO;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace MonkeyChat.Shared
 {
     public class AblyMessenger : IAblyMessenger
     {
+        class ConsoleLogSink : ILoggerSink
+        {
+            public void LogEvent(LogLevel level, string message)
+            {
+                Console.WriteLine(message);
+            }
+        }
 
 
-        string AblyApiKey = "YOUR_API_KEY_HERE";
+        string AblyApiKey = "Bss0RA.2NPWDA:nKjEFbpTlwCR1zMg";
 
 
         const string MessageEvent = "message";
@@ -24,7 +35,11 @@ namespace MonkeyChat.Shared
             _client = new AblyRealtime(new ClientOptions()
             {
                 Key = AblyApiKey,
-                EchoMessages = false // prevent messages the client sends echoing back
+                EchoMessages = true, // prevent messages the client sends echoing back
+                LogLevel = LogLevel.Debug,
+                LogHander = new ConsoleLogSink(),
+                TransportFactory = new MsWebSocketTransport.TransportFactory()
+
             });
 
             _client.Connection.On(args =>
@@ -60,5 +75,24 @@ namespace MonkeyChat.Shared
         {
             _channel.Publish(MessageEvent, text);
         }
+
+        public void LoadTestAppSetup()
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            var resourceName = "MonkeyChat.Shared.TestAppSetup.json";
+
+            string jsonString = string.Empty;
+            using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+            using (StreamReader reader = new StreamReader(stream))
+            {
+                jsonString = reader.ReadToEnd();
+            }
+
+            JObject testAppSpec = JObject.Parse(jsonString);
+        }
+
     }
+
+
+
 }

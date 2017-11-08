@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyChat.iOS", "MonkeyChat.iOS.csproj", "{FE589C2B-8B58-4002-B689-96704D6E4AE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.Debug|iPhone.Build.0 = Debug|iPhone
+		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.Release|iPhone.ActiveCfg = Release|iPhone
+		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.Release|iPhone.Build.0 = Release|iPhone
+		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.AppStore|iPhone.Build.0 = AppStore|iPhone
+	EndGlobalSection
+EndGlobal

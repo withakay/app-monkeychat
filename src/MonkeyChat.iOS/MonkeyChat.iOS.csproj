@@ -166,12 +166,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MonkeyChat\MonkeyChat.csproj">
-      <Project>{89B93CC3-A680-4567-87D2-946B0112A928}</Project>
-      <Name>MonkeyChat</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-60%402x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-76.png" />
@@ -197,6 +191,12 @@
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon 76%401x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon 76%402x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon 167%401x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MonkeyChat.NETStandard20\MonkeyChat.NETStandard20.csproj">
+      <Project>{A4F74F71-BD74-4090-B42E-82D57E10389D}</Project>
+      <Name>MonkeyChat.NETStandard20</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\MonkeyChat.Shared\MonkeyChat.Shared.projitems" Label="Shared" Condition="Exists('..\MonkeyChat.Shared\MonkeyChat.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

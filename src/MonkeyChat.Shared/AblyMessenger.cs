@@ -8,7 +8,7 @@ namespace MonkeyChat.Shared
     {
 
 
-        string AblyApiKey = "YOUR_API_KEY_HERE";
+        string AblyApiKey = "Bss0RA.2NPWDA:nKjEFbpTlwCR1zMg";
 
 
         const string MessageEvent = "message";

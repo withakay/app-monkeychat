@@ -19,7 +19,7 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
     <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
@@ -183,7 +183,7 @@
       <HintPath>..\packages\MsgPack.Cli.0.8.1\lib\MonoAndroid10\MsgPack.dll</HintPath>
     </Reference>
     <Reference Include="IO.Ably">
-      <HintPath>..\packages\ably.io.0.8.4.8\lib\monoandroid\IO.Ably.dll</HintPath>
+      <HintPath>..\packages\ably.io.0.8.6-ms-websockets-7\lib\monoandroid\IO.Ably.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

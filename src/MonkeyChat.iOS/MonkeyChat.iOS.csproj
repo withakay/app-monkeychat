@@ -162,7 +162,7 @@
       <HintPath>..\packages\MsgPack.Cli.0.8.1\lib\Xamarin.iOS10\MsgPack.dll</HintPath>
     </Reference>
     <Reference Include="IO.Ably">
-      <HintPath>..\packages\ably.io.0.8.4.8\lib\Xamarin.iOS\IO.Ably.dll</HintPath>
+      <HintPath>..\packages\ably.io.0.8.6-ms-websockets-7\lib\Xamarin.iOS\IO.Ably.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

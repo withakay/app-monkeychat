@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyChat.Droid", "MonkeyChat.Droid\MonkeyChat.Droid.csproj", "{893FF4C4-01FB-44EF-9FB3-C6292CD2BB44}"
 EndProject
@@ -11,9 +11,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyChat", "MonkeyChat\Mo
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MonkeyChat.Shared", "MonkeyChat.Shared\MonkeyChat.Shared.shproj", "{75FFDA2F-3508-43E3-AAE8-71EDEC89C271}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyChat.Console", "MonkeyChat.Console\MonkeyChat.Console.csproj", "{42711FD5-2A16-4A9F-BC46-01418C2F5ACD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonkeyChat.Console", "MonkeyChat.Console\MonkeyChat.Console.csproj", "{42711FD5-2A16-4A9F-BC46-01418C2F5ACD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyChat.UWP", "MonkeyChat.UWP\MonkeyChat.UWP.csproj", "{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		MonkeyChat.Shared\MonkeyChat.Shared.projitems*{75ffda2f-3508-43e3-aae8-71edec89c271}*SharedItemsImports = 13
+		MonkeyChat.Shared\MonkeyChat.Shared.projitems*{893ff4c4-01fb-44ef-9fb3-c6292cd2bb44}*SharedItemsImports = 4
+		MonkeyChat.Shared\MonkeyChat.Shared.projitems*{fe589c2b-8b58-4002-b689-96704d6e4ae1}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
 		Ad-Hoc|ARM = Ad-Hoc|ARM
@@ -130,6 +137,7 @@ Global
 		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.AppStore|x64.ActiveCfg = AppStore|iPhone
 		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.AppStore|x86.ActiveCfg = AppStore|iPhone
 		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.Debug|ARM.ActiveCfg = Debug|iPhone
 		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.Debug|iPhone.Build.0 = Debug|iPhone
@@ -145,7 +153,6 @@ Global
 		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.Release|x64.ActiveCfg = Release|iPhone
 		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.Release|x86.ActiveCfg = Release|iPhone
-		{FE589C2B-8B58-4002-B689-96704D6E4AE1}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{89B93CC3-A680-4567-87D2-946B0112A928}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
 		{89B93CC3-A680-4567-87D2-946B0112A928}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
 		{89B93CC3-A680-4567-87D2-946B0112A928}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU
@@ -242,9 +249,72 @@ Global
 		{42711FD5-2A16-4A9F-BC46-01418C2F5ACD}.Release|x64.Build.0 = Release|Any CPU
 		{42711FD5-2A16-4A9F-BC46-01418C2F5ACD}.Release|x86.ActiveCfg = Release|Any CPU
 		{42711FD5-2A16-4A9F-BC46-01418C2F5ACD}.Release|x86.Build.0 = Release|Any CPU
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Ad-Hoc|Any CPU.ActiveCfg = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Ad-Hoc|Any CPU.Build.0 = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Ad-Hoc|Any CPU.Deploy.0 = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Ad-Hoc|ARM.ActiveCfg = Release|ARM
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Ad-Hoc|ARM.Build.0 = Release|ARM
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Ad-Hoc|ARM.Deploy.0 = Release|ARM
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Ad-Hoc|iPhone.ActiveCfg = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Ad-Hoc|iPhone.Build.0 = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Ad-Hoc|iPhone.Deploy.0 = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Ad-Hoc|iPhoneSimulator.Deploy.0 = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Ad-Hoc|x64.ActiveCfg = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Ad-Hoc|x64.Build.0 = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Ad-Hoc|x64.Deploy.0 = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Ad-Hoc|x86.ActiveCfg = Release|x86
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Ad-Hoc|x86.Build.0 = Release|x86
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Ad-Hoc|x86.Deploy.0 = Release|x86
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.AppStore|Any CPU.ActiveCfg = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.AppStore|Any CPU.Build.0 = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.AppStore|Any CPU.Deploy.0 = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.AppStore|ARM.ActiveCfg = Release|ARM
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.AppStore|ARM.Build.0 = Release|ARM
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.AppStore|ARM.Deploy.0 = Release|ARM
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.AppStore|iPhone.ActiveCfg = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.AppStore|iPhone.Build.0 = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.AppStore|iPhone.Deploy.0 = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.AppStore|iPhoneSimulator.ActiveCfg = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.AppStore|iPhoneSimulator.Build.0 = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.AppStore|iPhoneSimulator.Deploy.0 = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.AppStore|x64.ActiveCfg = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.AppStore|x64.Build.0 = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.AppStore|x64.Deploy.0 = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.AppStore|x86.ActiveCfg = Release|x86
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.AppStore|x86.Build.0 = Release|x86
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.AppStore|x86.Deploy.0 = Release|x86
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Debug|ARM.ActiveCfg = Debug|ARM
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Debug|ARM.Build.0 = Debug|ARM
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Debug|ARM.Deploy.0 = Debug|ARM
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Debug|iPhone.ActiveCfg = Debug|x86
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Debug|x64.ActiveCfg = Debug|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Debug|x64.Build.0 = Debug|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Debug|x64.Deploy.0 = Debug|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Debug|x86.ActiveCfg = Debug|x86
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Debug|x86.Build.0 = Debug|x86
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Debug|x86.Deploy.0 = Debug|x86
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Release|Any CPU.ActiveCfg = Release|x86
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Release|ARM.ActiveCfg = Release|ARM
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Release|ARM.Build.0 = Release|ARM
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Release|ARM.Deploy.0 = Release|ARM
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Release|iPhone.ActiveCfg = Release|x86
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Release|iPhoneSimulator.ActiveCfg = Release|x86
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Release|x64.ActiveCfg = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Release|x64.Build.0 = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Release|x64.Deploy.0 = Release|x64
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Release|x86.ActiveCfg = Release|x86
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Release|x86.Build.0 = Release|x86
+		{41A6DFCE-7198-4CE0-A9B2-F3C7861D1648}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CFFC0AF2-5892-4359-BABC-76379B4427F8}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0
@@ -258,7 +328,7 @@ Global
 		$3.scope = text/x-csharp
 		$0.NameConventionPolicy = $4
 		$4.Rules = $5
-		$5.NamingRule = $6
+		$5.NamingRule = $25
 		$6.Name = Type Parameters
 		$6.AffectedEntity = TypeParameter
 		$6.VisibilityMask = VisibilityMask
@@ -269,14 +339,12 @@ Global
 		$27.String = T
 		$6.RequiredSuffixes = $28
 		$28.String = Exception
-		$5.NamingRule = $7
 		$7.Name = Types
 		$7.AffectedEntity = Class, Struct, Enum, Delegate
 		$7.VisibilityMask = Public
 		$7.NamingStyle = PascalCase
 		$7.IncludeInstanceMembers = True
 		$7.IncludeStaticEntities = True
-		$5.NamingRule = $8
 		$8.Name = Interfaces
 		$8.RequiredPrefixes = $9
 		$9.String = I
@@ -285,7 +353,6 @@ Global
 		$8.NamingStyle = PascalCase
 		$8.IncludeInstanceMembers = True
 		$8.IncludeStaticEntities = True
-		$5.NamingRule = $10
 		$10.Name = Attributes
 		$10.RequiredSuffixes = $11
 		$11.String = Attribute
@@ -294,7 +361,6 @@ Global
 		$10.NamingStyle = PascalCase
 		$10.IncludeInstanceMembers = True
 		$10.IncludeStaticEntities = True
-		$5.NamingRule = $12
 		$12.Name = Event Arguments
 		$12.RequiredSuffixes = $13
 		$13.String = EventArgs
@@ -303,7 +369,6 @@ Global
 		$12.NamingStyle = PascalCase
 		$12.IncludeInstanceMembers = True
 		$12.IncludeStaticEntities = True
-		$5.NamingRule = $14
 		$14.Name = Exceptions
 		$14.RequiredSuffixes = $15
 		$15.String = Exception
@@ -312,70 +377,60 @@ Global
 		$14.NamingStyle = PascalCase
 		$14.IncludeInstanceMembers = True
 		$14.IncludeStaticEntities = True
-		$5.NamingRule = $16
 		$16.Name = Methods
 		$16.AffectedEntity = Methods
 		$16.VisibilityMask = Protected, Public
 		$16.NamingStyle = PascalCase
 		$16.IncludeInstanceMembers = True
 		$16.IncludeStaticEntities = True
-		$5.NamingRule = $17
 		$17.Name = Static Readonly Fields
 		$17.AffectedEntity = ReadonlyField
 		$17.VisibilityMask = Protected, Public
 		$17.NamingStyle = PascalCase
 		$17.IncludeInstanceMembers = False
 		$17.IncludeStaticEntities = True
-		$5.NamingRule = $18
 		$18.Name = Fields
 		$18.AffectedEntity = Field
 		$18.VisibilityMask = Protected, Public
 		$18.NamingStyle = PascalCase
 		$18.IncludeInstanceMembers = True
 		$18.IncludeStaticEntities = True
-		$5.NamingRule = $19
 		$19.Name = ReadOnly Fields
 		$19.AffectedEntity = ReadonlyField
 		$19.VisibilityMask = Protected, Public
 		$19.NamingStyle = PascalCase
 		$19.IncludeInstanceMembers = True
 		$19.IncludeStaticEntities = False
-		$5.NamingRule = $20
 		$20.Name = Constant Fields
 		$20.AffectedEntity = ConstantField
 		$20.VisibilityMask = Protected, Public
 		$20.NamingStyle = PascalCase
 		$20.IncludeInstanceMembers = True
 		$20.IncludeStaticEntities = True
-		$5.NamingRule = $21
 		$21.Name = Properties
 		$21.AffectedEntity = Property
 		$21.VisibilityMask = Protected, Public
 		$21.NamingStyle = PascalCase
 		$21.IncludeInstanceMembers = True
 		$21.IncludeStaticEntities = True
-		$5.NamingRule = $22
 		$22.Name = Events
 		$22.AffectedEntity = Event
 		$22.VisibilityMask = Protected, Public
 		$22.NamingStyle = PascalCase
 		$22.IncludeInstanceMembers = True
 		$22.IncludeStaticEntities = True
-		$5.NamingRule = $23
 		$23.Name = Enum Members
 		$23.AffectedEntity = EnumMember
 		$23.VisibilityMask = VisibilityMask
 		$23.NamingStyle = PascalCase
 		$23.IncludeInstanceMembers = True
 		$23.IncludeStaticEntities = True
-		$5.NamingRule = $24
 		$24.Name = Parameters
 		$24.AffectedEntity = Parameter
 		$24.VisibilityMask = VisibilityMask
 		$24.NamingStyle = CamelCase
 		$24.IncludeInstanceMembers = True
 		$24.IncludeStaticEntities = True
-		$5.NamingRule = $25
 		$25.Name = Type Parameters
 		$25.RequiredPrefixes = $26
 		$26.String = T

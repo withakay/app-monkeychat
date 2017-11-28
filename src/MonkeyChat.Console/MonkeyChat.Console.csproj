@@ -6,6 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ably.io" Version="0.8.6-ms-websockets-7" />
+    <PackageReference Include="ably.io" Version="0.8.6" />
   </ItemGroup>
 </Project>
